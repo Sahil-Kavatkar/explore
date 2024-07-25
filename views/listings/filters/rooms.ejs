@@ -1,5 +1,21 @@
 <% layout("/layouts/boilerplate") %>
 <body>
+  <div id="loader">
+
+  </div>
+  <header class="beach-header">
+        
+    <div class="header-content">
+      <div class="text-content">
+        <h1>EXPLORE COZY ROOMS</h1>
+        <p>Find your perfect retreat and relax in comfort</p>
+      </div>      
+      <div class="image-content">
+        <img src="/living-room.png" alt="Beach" class="beach-png">
+      </div>
+    </div>
+  </header>
+  <div class="line"></div>
   
         <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-2 mt-3">
             <% for(let listing of allListings) { %>

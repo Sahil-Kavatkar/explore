@@ -1,3 +1,4 @@
+<div id="loader"></div>
 <% layout("/layouts/boilerplate") %>
 <style>
   .design{
@@ -76,11 +77,24 @@ a {
       }
     }
 
+  @media (max-width: 480px){
+  .search-bar{
+    max-width: 90%;
+  }
+  #filter{
+    gap:5px;
+    margin-top: -10px !important;
+    margin-left: 10px !important;
+  }
+  .filter p{
+   font-size: 10px !important;
+  }
+  .design{
+    align-items: center !important;
+  }
+}
 </style>
-  <body>
-    <div id="loader">
-
-    </div>
+  
     <% if (msg && msg.length) { %>
       <div class="col-6 offset-3 alert alert-warning alert-dismissible fade show" role="alert">
           <strong>Message ,</strong> <%= msg %>
@@ -158,5 +172,5 @@ a {
     }
   });
     </script>
-  </body>
+  
 

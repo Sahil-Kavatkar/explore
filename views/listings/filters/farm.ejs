@@ -1,6 +1,21 @@
 <% layout("/layouts/boilerplate") %>
 <body>
-  
+  <div id="loader">
+
+  </div>
+  <header class="beach-header">
+        
+    <div class="header-content">
+      <div class="text-content">
+        <h1>DISCOVER TRANQUIL FARMSIDE RETREATS</h1>
+        <p>Unwind in the serenity of the countryside</p>
+      </div>      
+      <div class="image-content">
+        <img src="/farm.png" alt="Beach" class="beach-png">
+      </div>
+    </div>
+  </header>
+  <div class="line"></div>
         <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-2 mt-3">
             <% for(let listing of allListings) { %>
               <a href="/listings/<%= listing._id %>" class="listing-link">
