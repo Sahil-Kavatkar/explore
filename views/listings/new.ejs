@@ -8,13 +8,13 @@
             <input id="title" name="listing[title]" placeholder="Enter title"  class="form-control" required /><br>
             <label for="description"  class="form-label">Description:</label>
             <textarea id="description" name="listing[description]" placeholder="Enter description" class="form-control" required ></textarea><br>
-             <label for="image">Image Link:</label>
-            <input type="file" id="image" name="listing[image]" placeholder="Enter image Link"><br>
+             <label for="image">Upload Image:</label>
+            <input type="file" id="image" name="listing[image]" placeholder="Enter image Link" class="form-control" required ><br>
             <label for="price"  class="form-label">Price:</label>
             <input id="price" name="listing[price]" placeholder="Enter price" class="form-control" required /><br>
             <label for="category" class="form-label">Choose a Type:</label>
 
-            <select name="listing[category]" id="category">
+            <select name="listing[category]" id="category" class="form-control" required>
             <option value="">--Please choose an option--</option>
             <option value="Farm">Farm</option>
             <option value="Rooms">Rooms</option>
