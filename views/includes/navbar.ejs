@@ -1,0 +1,39 @@
+<body>
+<nav class="navbar navbar-expand-md bg-body-tertiary sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><i class="fa-solid fa-location-arrow fa-xl" style="color: #e14141;"></i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <h4 style="color: #e14141; font-weight: bold; margin-top: auto;">STAYEASE</h4>
+        <a class="nav-link" href="/listings">Explore</a>
+        <a class="nav-link" href="/listings/new">Add new listing</a>
+      </div>
+      
+      <div class="navbar-nav" style="margin-left: auto; margin-right: 100px;">
+        <% if(!currUser) { %>
+          
+          <a class="nav-link" href="/signup"><b>SignUp</b></a>
+          <a class="nav-link" href="/login"><b>Login</b></a>
+        <% } %>
+        <% if(currUser) { %>
+          <div class="profile-nav">
+            <div class="profile-icon">
+              <i class="fa-solid fa-user fa-xl"></i>
+              <span><%= currUser.username %></span>
+            </div>
+            <div class="tooltip-content">
+              <p><b>Username:</b> <%= currUser.username %></p>
+              <p><b>Email:</b> <%= currUser.email %></p>
+              <!-- Add more user info here if needed -->
+            </div>
+          </div>
+          <a class="nav-link" href="/logout"><b>LogOut</b></a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>
+</body>

@@ -1,0 +1,27 @@
+<%- layout("/layouts/boilerplate") %>
+<body>
+    <% if (errmsg && errmsg.length) { %>
+        <div class="col-6 offset-3 alert alert-warning alert-dismissible fade show" role="alert">
+              <strong>Message ,</strong> <%= errmsg %>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div><% } %> 
+<div class="row mt-3">
+    <h3 class="col-6 offset-3"><b>LOGIN</b></h3><br>
+    <div class="col-6 offset-3">
+        
+        <form method="POST" action="/login" novalidate class="needs-validation">
+           <div clas="mb-3">
+            <label for="username" class="form-label">Username:</label>
+            <input id="username" name="username" placeholder="Enter username"  class="form-control" required /><br>
+            <div  class="invalid-feedback">Please enter Username</div><br>
+           </div>
+           <div clas="mb-3">
+            <label for="password" class="form-label">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter password"  class="form-control" required /><br>
+            <div  class="invalid-feedback">Please enter Password</div><br>
+           </div> 
+           <button class="btn btn-success">LOGIN</button> 
+        </form>
+    </div>
+</div>
+</body>
