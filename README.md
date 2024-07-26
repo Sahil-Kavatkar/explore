@@ -30,4 +30,3 @@ Explore is a comprehensive platform where users can list their homes for rent in
 
 
 
-
