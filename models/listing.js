@@ -34,11 +34,9 @@ const listingSchema = new Schema({
    },
    latitude: {
       type: Number,
-      required: true,
    },
    longitude: {
       type: Number,
-      required: true,
    },  
 });
 
