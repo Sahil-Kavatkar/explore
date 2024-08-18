@@ -493,3 +493,35 @@ button:focus {
     margin-top: 20px;
   }
 }
+
+/* map */
+
+#map { 
+  width: 70%; /* Set the width of the map */
+  height: 400px; /* Set the height of the map */
+  margin: 50px auto; 
+  border: 1px solid #ccc; /* Optional: Add a border around the map */
+}
+
+.animated-marker {
+  width: 30px;
+  height: 30px;
+  background-color: #ff6347;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  position: relative;
+  margin-top: -40px;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 99, 71, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(255, 99, 71, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 99, 71, 0);
+  }
+}

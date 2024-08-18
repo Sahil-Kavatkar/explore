@@ -1,4 +1,9 @@
 <% layout("/layouts/boilerplate") %>
+<script>
+    const mapToken ="<%= process.env.MAP_API %>";
+    const lati ="<%= listing.latitude %>";
+    const longi ="<%= listing.longitude %>"
+</script>
 <body>
     <% if (msg && msg.length) { %>
         <div class="col-6 offset-3 alert alert-warning alert-dismissible fade show" role="alert">
@@ -84,8 +89,10 @@
             <button class="btn btn-dark btn-sm">Delete</button>
         </form>
     </div> 
-   <% } %></div>
+   <% } %></div><br>
    </div>
+   <h4>Where You Will Be!</h4>
+   <div id="map"></div>
 </div>
-
+<script src="/js/map.js"></script>
 </body>
